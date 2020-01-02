@@ -1,7 +1,9 @@
 package edu.kit.tm.cm.scdm.vehicle;
 
+import edu.kit.tm.cm.scdm.vehicle.domain.model.Vehicle;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class VehicleMicroservice {
@@ -14,4 +16,8 @@ public class VehicleMicroservice {
         SpringApplication.run(VehicleMicroservice.class, args);
     }
 
+    @Bean(name = "vehicle")
+    public Vehicle generateVehicle() {
+        return new Vehicle();
+    }
 }

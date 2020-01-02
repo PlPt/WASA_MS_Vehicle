@@ -100,6 +100,13 @@
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Apache Commons Lang -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
     </dependencies>
 
     <!-- Package as an executable jar -->
