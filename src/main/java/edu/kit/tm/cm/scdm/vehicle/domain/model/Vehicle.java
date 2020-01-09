@@ -11,6 +11,6 @@ public class Vehicle {
     public Vehicle() {
         String vin = RandomStringUtils.randomAlphanumeric(17).toUpperCase(); //ISO 3779: VIN has 17 characters
         this.staticVehicleData = new StaticVehicleData(vin);
-        this.dynamicVehicleData = new DynamicVehicleData(vin);
+        this.dynamicVehicleData = new DynamicVehicleData(this);
     }
 }

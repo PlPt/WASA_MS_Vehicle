@@ -2,12 +2,14 @@ package edu.kit.tm.cm.scdm.vehicle.application.controllers.api;
 
 import edu.kit.tm.cm.scdm.vehicle.application.dtos.response.DynamicVehicleDataResponse;
 import edu.kit.tm.cm.scdm.vehicle.application.dtos.response.StaticVehicleDataResponse;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @RequestMapping("/api/v1")
+@Api(tags = "vehicle", description = "Get vehicle data")
 public interface VehicleApi {
 
     /**

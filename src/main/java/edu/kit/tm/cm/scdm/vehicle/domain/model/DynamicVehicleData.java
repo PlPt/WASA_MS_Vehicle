@@ -7,10 +7,14 @@ import java.time.Instant;
 
 @Getter
 public class DynamicVehicleData {
-    private final String vin;
+    private final Vehicle vehicle;
 
-    public DynamicVehicleData(String vin) {
-        this.vin = vin;
+    public DynamicVehicleData(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
+    public String getVin() {
+        return vehicle.getStaticVehicleData().getVin();
     }
 
     public Coordinate getPosition() {
