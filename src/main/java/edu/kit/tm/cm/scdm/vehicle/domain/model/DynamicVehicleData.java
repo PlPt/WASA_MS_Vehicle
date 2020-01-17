@@ -21,8 +21,8 @@ public class DynamicVehicleData {
         return new Coordinate(RandomUtils.nextDouble(49, 50), RandomUtils.nextDouble(8, 9));
     }
 
-    public String getTankLevel() {
-        return RandomUtils.nextFloat(0, 1) + "%";
+    public double getTankLevel() {
+        return RandomUtils.nextFloat(0, 1) * vehicle.getStaticVehicleData().getTankCapacity();
     }
 
     public double getOilPressure() {

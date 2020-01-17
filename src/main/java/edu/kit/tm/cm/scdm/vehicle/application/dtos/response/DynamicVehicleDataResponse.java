@@ -15,7 +15,7 @@ public class DynamicVehicleDataResponse {
     Coordinate position;
 
     @ApiModelProperty(position = 3)
-    String tankLevel;
+    double tankLevel;
 
     @ApiModelProperty(position = 4)
     double oilPressure;
