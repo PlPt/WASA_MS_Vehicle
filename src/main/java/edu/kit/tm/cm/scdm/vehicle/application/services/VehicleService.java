@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class VehicleService {
 
-    private Vehicle vehicle;
+    private final Vehicle vehicle;
 
     /**
      * Initializes the VehicleService via dependency injection

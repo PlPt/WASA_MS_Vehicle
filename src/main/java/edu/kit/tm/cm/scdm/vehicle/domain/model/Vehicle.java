@@ -5,8 +5,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 @Getter
 public class Vehicle {
-    private StaticVehicleData staticVehicleData;
-    private DynamicVehicleData dynamicVehicleData;
+    private final StaticVehicleData staticVehicleData;
+    private final DynamicVehicleData dynamicVehicleData;
 
     public Vehicle() {
         String vin = RandomStringUtils.randomAlphanumeric(17).toUpperCase(); //ISO 3779: VIN has 17 characters

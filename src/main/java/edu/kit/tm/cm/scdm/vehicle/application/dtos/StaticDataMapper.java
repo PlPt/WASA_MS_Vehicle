@@ -6,5 +6,5 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface StaticDataMapper {
-    StaticVehicleDataResponse toRespone(StaticVehicleData staticVehicleData);
+    StaticVehicleDataResponse toResponse(StaticVehicleData staticVehicleData);
 }

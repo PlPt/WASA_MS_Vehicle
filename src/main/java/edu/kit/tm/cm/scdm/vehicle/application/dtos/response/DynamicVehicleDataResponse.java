@@ -18,10 +18,10 @@ public class DynamicVehicleDataResponse {
     String tankLevel;
 
     @ApiModelProperty(position = 4)
-    String oilPressure;
+    double oilPressure;
 
     @ApiModelProperty(position = 5)
-    String tirePressure;
+    double tirePressure;
 
     @ApiModelProperty(position = 6)
     String timestamp;

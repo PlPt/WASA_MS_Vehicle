@@ -35,7 +35,7 @@ public class VehicleController implements VehicleApi {
 
     @Override
     public StaticVehicleDataResponse getStaticVehicleData() {
-        return staticDataMapper.toRespone(vehicleService.getStaticVehicleData());
+        return staticDataMapper.toResponse(vehicleService.getStaticVehicleData());
     }
 
     @Override
