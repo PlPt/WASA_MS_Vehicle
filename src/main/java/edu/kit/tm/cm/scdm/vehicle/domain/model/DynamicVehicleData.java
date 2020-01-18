@@ -8,6 +8,11 @@ import java.time.Instant;
 @Getter
 public class DynamicVehicleData {
     private final Vehicle vehicle;
+    private Coordinate position;
+    private double tankLevel;
+    private double oilPressure;
+    private double tirePressure;
+    private String timestamp;
 
     public DynamicVehicleData(Vehicle vehicle) {
         this.vehicle = vehicle;
@@ -17,23 +22,11 @@ public class DynamicVehicleData {
         return vehicle.getStaticVehicleData().getVin();
     }
 
-    public Coordinate getPosition() {
-        return new Coordinate(RandomUtils.nextDouble(49, 50), RandomUtils.nextDouble(8, 9));
-    }
-
-    public double getTankLevel() {
-        return RandomUtils.nextFloat(0, 1) * vehicle.getStaticVehicleData().getTankCapacity();
-    }
-
-    public double getOilPressure() {
-        return RandomUtils.nextDouble(1, 3);
-    }
-
-    public double getTirePressure() {
-        return RandomUtils.nextDouble(1.5, 4);
-    }
-
-    public String getTimestamp() {
-        return Instant.now().toString();
+    public void update() {
+        position = new Coordinate(RandomUtils.nextDouble(49, 50), RandomUtils.nextDouble(8, 9));
+        tankLevel = RandomUtils.nextFloat(0, 1) * vehicle.getStaticVehicleData().getTankCapacity();
+        oilPressure = RandomUtils.nextDouble(1, 3);
+        tirePressure = RandomUtils.nextDouble(1.5, 4);
+        timestamp = Instant.now().toString();
     }
 }
